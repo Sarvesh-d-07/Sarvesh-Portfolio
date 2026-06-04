@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    background: #0a0a0b;
+    font-family: Inter, Geist, ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 34rem),
+      radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 30rem),
+      #0a0a0b;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+    border: 2px solid #0a0a0b;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.55);
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.045] shadow-soft backdrop-blur-xl;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.2em] text-violet-200/80;
+  }
+
+  .section-title {
+    @apply mt-4 max-w-3xl text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .muted-copy {
+    @apply leading-8 text-white/[0.62];
+  }
+}
